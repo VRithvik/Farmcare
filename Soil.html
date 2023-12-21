@@ -1,0 +1,144 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Farm Care</title>
+    <style>
+        div {
+            background-color: green;
+            color: yellow;
+        }
+
+        hr {
+            border-top: 1px solid yellow;
+        }
+        .overlay{
+  overflow: hidden;
+  background-color: yellow;
+}
+
+.overlay a {
+  float: left;
+  color: green;
+  text-align: center;
+  padding: 14px 150px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.overlay a:hover {
+  background-color: green;
+  color: black;
+}
+
+</style>
+</head>
+
+<body bgcolor="green" text="yellow">
+    <div>
+        <h1 align="center"> Farm Care </h1>
+        <h4 align="center">A Care To Our King and His Kingdom</h4>
+    </div><hr>
+    <div class="overlay"><a href="FarmCare.html">home</a>
+        <a href="Seasoncrops.html">season crops</a>
+        <a href="Water Resource.html">water resources</a>
+        <a href="Fertilizers.html">fertilisers</a>
+    </div>
+    <hr>
+    <h3 align="center" style="background-color: yellow; color: darkgreen;">About Soils</h3>
+    <p>Soil is the loose surface that cover the land. Soil consists of organic and inorganic matter. Soil plays
+        important
+        role in the farming.Soil varies in terms of texture,color,depth and stone content.The good soil structure allow
+        plant to stay healthy by allowing water and air.Soil also help in storing water for plant growth.In farming
+        monitering the characteristics of soil and understanding the soil condition is very important.</p>
+    <p>In India their are total of seven soil deposits they are:</p>
+    <ul>
+        <li>Alluvial Soil</li>
+        <li>Black Soil</li>
+        <li>Red Soil</li>
+        <li>Laterite Soil</li>
+        <li>Forest and Mountainous Soil</li>
+        <li>Marsh Soil</li>
+        <li>Arid Soil</li>
+    </ul>
+    <hr>
+    <h4>Alluvial Soil :</h4>
+    <p>The alluvial soil is <b>very fertile</b> in nature.this soil contain <b>potash,phosphoric acid and
+            lime.</b>Alluvial soil is deposited by the Indus,the Ganges and Brahamaputra rivers.The entire northern
+        plains and west are made of alluvial soil.Alluvial soil also found in some parts of eastern coastal
+        plains.Alluvial soil gives good yeilds in <b>sugarcane,paddy,wheat</b></p>
+    <h4>Black Soil :</h4>
+    <p>Black soil also known as regur soil.The black soils are made up of <b>clayey soil</b> well known for their
+        capacity to
+        hold moisture because of their high clay content.Black soil is typical of the Deccan trap region spread over
+        northwests Deccan plateau and is made up of lava flows and extend in the south-east direction.Black soil is rich
+        in <b>calcium carbonate, magnesium, potash and lime</b>.Black soil is ideal for growing <b>cotton</b> and is
+        known as black
+        cotton soil.</p>
+    <h4>Red Soil :</h4>
+    <p>Red Soil is also known as Omnibus soil.Red soils contain large amounts of <b>clay</b>.Red soils develop a reddish
+        colour
+        due to diffusion of <b>iron in crystalline,ferric oxide and metamorphic rocks</b>.Red soil develops on
+        crystalline
+        igneous rocks in areas of low rainfall in the eastern and southern parts of the Deccan plateau.Red soil is ideal
+        for growning <b>Wheat, pulses, tobacco, oilseeds, potatoes, etc.</b></p>
+    <h4>Laterite Soil :</h4>
+    <p> Laterite soil is rich with vital nutrients and is widely used.Laterite is a soil and rock type rich in iron and
+        aluminium and is commonly considered to have formed in hot and wet tropical areas.Laterite soil is reddish to
+        yellow in color with a lower content of potassium, phosphorus, nitrogen, lime, and magnesia.Laterite soil is
+        suitable for growing coffee, tea, rubber, coconut, cinchona, etc.</p>
+    <h4>Forest and Mountainous Soil :</h4>
+    <p>Forest and Mountainous soils are heterogeneous in nature, and their character changes with the environment and
+        altitude.These soils are very rich in humus, but are deficient in potash, phosphorous and lime.Forest and
+        Mountainous soil is suitable for plantation of tea, coffee, spices and tropical fruits.</p>
+    <h4>Marsh Soil :</h4>
+    <p>Marsh soil are wetland that is dominated by herbaceous rather than woody plant species.Marsh Soil can often be
+        found at the edges of lakes and streams, where they form a transition between the aquatic and terrestrial
+        ecosystems. They are often dominated by grasses, rushes or reeds.Marsh soil provide habitats for many kinds of
+        invertebrates, fish, amphibians, waterfowl and aquatic mammals.</p>
+    <h4>Arid Soil :</h4>
+    <p>Arid soil is one of the most predominant soil orders found on the planet, also known as desert soil.This soil is
+        brown and red in color and sandy in texture.The arid soils usually comprise high concentrations of gypsum,
+        calcium carbonates, and sodium.The soil comprises a significant concentration of soluble salts.The soil lacks
+        moisture and humus.The soil is generally not suitable for the majority of crop production.</p>
+    <hr>
+    <h4 align="center">Find out the soil present in your state:</h4>
+    <pre>                                                                                               <select id="state">
+                                                                                                        <option id="select the state">select the state</option>
+                                                                                                        <option id="Andhra Pradesh">Andhra Pradesh</option>
+                                                                                                        <option id="Telangana">Telangana</option>
+                                                                                                        <option id="Karnataka">Karnataka</option>
+                                                                                                        <option id="Tamil Nadu">Tamil Nadu</option>
+                                                                                                        <option id="Kerala">Kerala</option>
+                                                                                                        </select>
+    </pre>
+    <p id="output"></p>
+    <script>
+        const selectElement = document.querySelector('#state');
+        const outputElement = document.querySelector('#output');
+        selectElement.addEventListener('change', (event) => {
+            switch (event.target.value) {
+                case 'Andhra Pradesh':
+                    outputElement.innerHTML = 'Andhra pradesh has Red soil, Alluvial soil, Black soil, Saline soil, Sandy coastal soil, Rocky Hill soil, and Marshy soil';
+                    break;
+                case 'Telangana':
+                    outputElement.innerHTML = 'Telangana contains red sandy loams, Red loamy sands, lateritic soils, salt-affected soils, alluvial soils, shallow to medium black soils ';
+                    break;
+                case 'Karnataka':
+                    outputElement.innerHTML = 'The karnataka soil is very fertile in nature.The northern part of karnataka contains black soil where as the southern part contains red soil.We can also find the Alluvial soil in the coast area';
+                    break;
+                case 'Tamil Nadu':
+                    outputElement.innerHTML = 'Tamil nadu is covered with red soil almost 75% .The texture of soil is porous and friable or crumbly.';
+                    break;
+                case 'Kerala':
+                    outputElement.innerHTML = 'Kerala is one of the place where we can find four main kinds of they are Alluvial, laterite, forest soil and red soil ';
+                    break;
+                default:
+                    outputElement.innerHTML = '';
+            }
+        });
+    </script>
+</body>
+
+</html>
